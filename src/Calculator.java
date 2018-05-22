@@ -10,9 +10,19 @@ public class Calculator {
 		System.out.println("µÎ¹øÂ° ÀÔ·Â °ª: ");
 		int second = scanner.nextInt();
 		
-		System.out.println("µ¡¼À : "+ (first+second));
-		System.out.println("»¬¼À : "+ (first-second));
-		System.out.println("°ö¼À : "+ (first*second));
-		System.out.println("³ª´°¼À : "+ (first/second));
+		System.out.println("»çÄ¢¿¬»ê °ª: ");
+		String symbol = scanner.next();
+		
+		if(symbol.equals("+")){
+			System.out.println("µ¡¼À : "+ (first+second));
+		} else if(symbol.equals("-")){
+			System.out.println("»¬¼À : "+ (first-second));
+		} else if(symbol.equals("*")){
+			System.out.println("°ö¼À : "+ (first*second));
+		} else if(symbol.equals("/")){
+			System.out.println("³ª´°¼À : "+ (first/second));		
+		} else {
+			System.out.println("»çÄ¢¿¬»ê °ªÀ» Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+		}
 	}
 }

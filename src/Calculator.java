@@ -2,65 +2,47 @@ import java.util.Scanner;
 
 public class Calculator {
 		
-		static int getFirstValue(Scanner scanner) {
-			System.out.println("입력 값: ");
-			int first = scanner.nextInt();
-			return first;
-		}
 		
-		static String getSymbol(Scanner scanner) {
-			System.out.println("기호: ");
-			String symbol = scanner.next();
-			return symbol;
-		}
-		
-		static int getSecondValue(Scanner scanner) {
-			System.out.println("입력 값: ");
-			int second = scanner.nextInt();
-			return second;
-		}
-		
-		static int calculate(String symbol, int first, int second){
+		static int calculate(String symbol, int result, int second){
 			if(symbol.equals("+")){
-				first = first + second;
-				System.out.println("현재 값 : "+first);
+				result = result + second;
+				System.out.println("현재 값 : "+result);
 			} else if(symbol.equals("-")){
-				first = first - second;
-				System.out.println("현재 값 : "+first);
+				result = result - second;
+				System.out.println("현재 값 : "+result);
 			} else if(symbol.equals("*")){
-				first = first * second;
-				System.out.println("현재 값 : "+first);
+				result = result * second;
+				System.out.println("현재 값 : "+result);
 			} else if(symbol.equals("/")){
-				first = first / second;
-				System.out.println("현재 값 : "+first);
+				result = result / second;
+				System.out.println("현재 값 : "+result);
 			} else {
 				System.out.println("사칙연산 값을 잘못 입력하셨습니다.");
 			}
 			
-			return first;
+			return result;
 			
 		}
 		
-		static void print(int first){
-				System.out.println("최종 값 : "+first);
-		}
+		
 		
 		public static void main(String[] args) {
 			Scanner scanner = new Scanner(System.in);
 			
-			int first = getFirstValue(scanner);
+			int result = Input.getFirstValue(scanner);
 			
 			while (true) {
-				String symbol = getSymbol(scanner);
+				String symbol = Input.getSymbol(scanner);
 				
 				if ("quit".equals(symbol)){
-					print(first);
+					Output.print(result);
 					break;
 				}
 				
-				int second = getSecondValue(scanner);
+				int second = Input.getSecondValue(scanner);
 				
-				first = calculate(symbol, first, second);
+
+				result = calculate(symbol, result, second);
 			}
 			
 			scanner.close();

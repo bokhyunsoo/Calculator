@@ -3,19 +3,36 @@ import java.util.Scanner;
 public class Calculator {
 		
 		
+//		static int calculate(String symbol, int result, int second){
+//			if(symbol.equals("+")){
+//				result = result + second;
+//				System.out.println("현재 값 : "+result);
+//			} else if(symbol.equals("-")){
+//				result = result - second;
+//				System.out.println("현재 값 : "+result);
+//			} else if(symbol.equals("*")){
+//				result = result * second;
+//				System.out.println("현재 값 : "+result);
+//			} else if(symbol.equals("/")){
+//				result = result / second;
+//				System.out.println("현재 값 : "+result);
+//			} else {
+//				System.out.println("사칙연산 값을 잘못 입력하셨습니다.");
+//			}
+//			
+//			return result;
+//			
+//		}
+		
 		static int calculate(String symbol, int result, int second){
 			if(symbol.equals("+")){
 				result = result + second;
-				System.out.println("현재 값 : "+result);
 			} else if(symbol.equals("-")){
 				result = result - second;
-				System.out.println("현재 값 : "+result);
 			} else if(symbol.equals("*")){
 				result = result * second;
-				System.out.println("현재 값 : "+result);
 			} else if(symbol.equals("/")){
 				result = result / second;
-				System.out.println("현재 값 : "+result);
 			} else {
 				System.out.println("사칙연산 값을 잘못 입력하셨습니다.");
 			}
